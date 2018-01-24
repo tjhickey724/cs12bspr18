@@ -1,3 +1,6 @@
+/**
+  This represented the class of Complex numbers a+ib.
+*/
 public class Complex{
   private double re;
   private double im;
