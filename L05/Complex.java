@@ -1,5 +1,8 @@
 /**
-  This represented the class of Complex numbers a+ib.
+  This is the official javadoc for
+  the Complex class!
+  @author Tim Hickey
+
 */
 public class Complex{
   private double re;
