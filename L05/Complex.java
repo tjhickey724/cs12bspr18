@@ -1,3 +1,9 @@
+/**
+  This is the official javadoc for
+  the Complex class!
+  @author Tim Hickey
+  
+*/
 public class Complex{
   private double re;
   private double im;
