@@ -17,8 +17,14 @@ public class BankAccount0 {
 	  create an account with balance 0 and the specified name n
 	*/
   public BankAccount0(String n){
-    this.name = n;
-    this.balance = 0;
+    this(n,0);
+  }
+
+  /**
+    create an anonymous account with 0 balance
+  */
+  public BankAccount0(){
+    this("anonymous",0);
   }
 
 	/**
@@ -34,15 +40,16 @@ public class BankAccount0 {
 	  @return true if the two accounts have the same balance and name
 	*/
 	public boolean equals(BankAccount0 b){
-		return false;
+		return this.name.equals(b.name) && this.balance == b.balance;
 	}
 
   /**
     adds the amt to the balance field
+    called as acct.deposit(1000);
 	  @param amt the amount to deposit into the account
   */
   public void deposit(int amt){
-
+    this.balance += amt;
   }
 
 
