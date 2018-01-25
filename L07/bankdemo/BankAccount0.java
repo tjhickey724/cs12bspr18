@@ -57,15 +57,18 @@ public class BankAccount0 {
     subtracts the amt from the balance field of this object
 	  @param amt the amount to withdraw from the account
   */
-  public void withdraw(int amt){
-
+  public void withdraw(int amt) throws Exception {
+    if (amt > this.balance) {
+      throw new Exception("insufficient funds");
+    }
+    this.balance -= amt;
   }
 
   /**
     @return the balance in the account ...
   */
   public int getBalance(){
-		return 0;
+		return this.balance;
 
   }
 
@@ -74,8 +77,18 @@ public class BankAccount0 {
 	@param t the amount to transfer
 	@param account the bank account to transfer the funds to
   */
-  public void transferTo(int t, BankAccount0 account){
+  public void transferTo(int t, BankAccount0 account) throws Exception{
+    this.withdraw(t);
+    account.deposit(t);
+  }
 
+
+  public int getNumberOfTransactions(){ // returns number of transactions for this account
+    return 0;
+  }
+
+  public static int getAllTransactions(){  // returns number of transactions for all accounts
+    return 0;
   }
 
 
