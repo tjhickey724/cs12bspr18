@@ -7,6 +7,12 @@ public class TestComplex{
          (z.equals(z2)));
     Complex w = new Complex(3,1);
     Complex r = new Complex(7);
+    Complex s = Complex.fromPolar(Math.sqrt(8),Math.PI/4);
+    System.out.println("s="+s);
+    System.out.println("s.r="+s.getR());
+    System.out.println("s.theta="+s.getTheta());
+
+
     Complex u = Complex.add(z,w);
     Complex v = Complex.multiply(z,w);
 

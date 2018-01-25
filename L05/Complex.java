@@ -1,3 +1,9 @@
+/**
+  This is the official javadoc for
+  the Complex class!
+  @author Tim Hickey
+
+*/
 public class Complex{
   private double re;
   private double im;
@@ -12,6 +18,12 @@ public class Complex{
     this.im = 0;
   }
 
+  public static Complex fromPolar(double r, double theta){
+    double re = r*Math.cos(theta);
+    double im = r*Math.sin(theta);
+    return new Complex(re,im);
+  }
+
   /**
   returns the real part of the complex number z
   called as  double r = z.getReal();
@@ -21,6 +33,12 @@ public class Complex{
   }
   public double getImag(){
     return this.im;
+  }
+  public double getR(){
+    return Math.sqrt(this.re*this.re + this.im*this.im);
+  }
+  public double getTheta(){
+    return Math.atan2(this.im,this.re);
   }
   /**
   changes the real part of a complex number z
