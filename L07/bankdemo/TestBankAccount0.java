@@ -1,9 +1,9 @@
 package bankdemo;
 
-public class TestBankAccount{
-  public static void main(String[] args) throws Exception{
-   BankAccount a1 = new BankAccount("Tim's Gold",1000);
-   BankAccount a2 = new BankAccount("William's Gold");
+public class TestBankAccount0{
+  public static void main(String[] args){
+   BankAccount0 a1 = new BankAccount0("Tim's Gold",1000);
+   BankAccount0 a2 = new BankAccount0("William's Gold");
    a2.deposit(250);
    // a1.balance = 1000000;
 
@@ -23,8 +23,8 @@ public class TestBankAccount{
 	 System.out.println("a2="+a2);
 
 
-	 System.out.println("\n\ntransfer 100000 from a1 to a2");
-   a1.transferTo(100000,a2);
+	 System.out.println("\n\ntransfer 100 from a1 to a2");
+   a1.transferTo(100,a2);
 	 System.out.println("a1="+a1);
 	 System.out.println("a2="+a2);
 
