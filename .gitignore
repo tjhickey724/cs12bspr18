@@ -1,4 +1,9 @@
 # Compiled class file
+doc
+
+.DS_Store
+*~
+
 *.class
 
 # Log file
