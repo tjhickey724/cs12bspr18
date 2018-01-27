@@ -1,12 +1,13 @@
+# Mac directory information file
 .DS_Store
+
+# emacs backup files
 *~
 
-# Compiled class file
+# documentation folder
 doc
 
-.DS_Store
-*~
-
+# Compiled class file
 *.class
 
 # Log file
