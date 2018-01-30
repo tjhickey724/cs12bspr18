@@ -8,8 +8,9 @@ import java.awt.Graphics;
  * is drawn as a filled oval, with a black outline.
  *
  * It also holde the velocity vx and vy of the circle in terms of
- * the change in x and y respectively in pixels per second.
- * We also assume the circles are on a rectanular board which limits their movement
+ * the change in x and y respectively in pixels per second and has
+ * code for updating its position after a specified amount of time.
+ * We assume the circles are on a rectanular board which limits their movement
  */
 public class CircleShape {
 	  public static int boardWidth=500;
@@ -40,7 +41,7 @@ public class CircleShape {
     }
 
 		/**
-				create a circle with a random position and velocity and color
+				create a circle with a random position and velocity and color and radius
 		*/
 		public CircleShape() {
 			  this(0,0,10);
@@ -54,15 +55,18 @@ public class CircleShape {
     /**
      * Draw the disk in graphics context g, with a black outline.
 		 * Its posiion is given by doubles so we have to convert them to integers!
+		 * Remember that the draw/fillOval methods take the upper left corner (u,v)
+		 * and the width (w) and height (h) of the smallest box enclosing the oval.
      */
     public void draw( Graphics g ) {
 				int u = (int)(x-radius);
 				int v = (int)(y-radius);
-				int r = (int)(2*radius);
+				int w = (int)(2*radius);
+				int h = w;
         g.setColor( color );
-        g.fillOval( u,v,r,r );
+        g.fillOval( u,v,w,h );
         g.setColor( Color.BLACK );
-        g.drawOval(u,v,r,r );
+        g.drawOval(u,v,w,h );
     }
 
 		/**
@@ -71,7 +75,7 @@ public class CircleShape {
 		*/
 		public void update(double dt){
 			// change the properties of the CircleShape after dt seconds have elapsed.
-			this.x += 0;  \\ for now they do not move
+			this.x += 0;  // for now they do not move
 			this.y += 0;
 
 			this.keepOnBoard();
