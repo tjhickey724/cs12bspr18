@@ -25,9 +25,9 @@ public class CircleShape {
     /**
      * Create a CircleShape with a given location and radius and with a
      * randomly selected, semi-transparent color.
-     * @param centerX   The x coordinate of the center.
-     * @param centerY   The y coordinate of the center.
-     * @param rad       The radius of the circle.
+     * @param x   The x coordinate of the center.
+     * @param y   The y coordinate of the center.
+     * @param radius       The radius of the circle.
      */
     public CircleShape( double x, double y, int radius ) {
         this.x = x;
