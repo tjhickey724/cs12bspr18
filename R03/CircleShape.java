@@ -21,6 +21,12 @@ public class CircleShape {
     public Color color;   // The color of the circle.
 		private double vx=20;
 		private double vy=10;
+    private double vr= 1;
+    private String circleType = "changeRadius";
+
+    public void setCircleType(String s){
+      this.circleType = s;
+    }
 
     /**
      * Create a CircleShape with a given location and radius and with a
@@ -52,6 +58,8 @@ public class CircleShape {
 				this.vy = (int)(50*Math.random()-25);
 		}
 
+
+
     /**
      * Draw the disk in graphics context g, with a black outline.
 		 * Its posiion is given by doubles so we have to convert them to integers!
@@ -77,6 +85,12 @@ public class CircleShape {
 			// change the properties of the CircleShape after dt seconds have elapsed.
 			this.x += dt*vx;  // for now they do not move
 			this.y += dt*vy;
+
+      if (circleType=="changeRadius") {
+        this.radius += dt*vr;
+        if (this.radius <10) this.vr = -this.vr;
+        else if (this.radius > 50) this.vr = - this.vr;
+      }
 
 			this.keepOnBoard();
 		}
