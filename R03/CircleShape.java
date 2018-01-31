@@ -75,8 +75,8 @@ public class CircleShape {
 		*/
 		public void update(double dt){
 			// change the properties of the CircleShape after dt seconds have elapsed.
-			this.x += 0;  // for now they do not move
-			this.y += 0;
+			this.x += dt*vx;  // for now they do not move
+			this.y += dt*vy;
 
 			this.keepOnBoard();
 		}
@@ -89,18 +89,22 @@ public class CircleShape {
 			change the values of x,y,vx,vy to keep the circle on the board
 		*/
 		public void keepOnBoard(){
-			if (this.x < this.radius) {
+			if (this.x < 0) {
 				// it went off the left edge! do something!
+        this.x = CircleShape.boardWidth;
 
-			}else if (this.x > CircleShape.boardWidth-this.radius) {
+			}else if (this.x > CircleShape.boardWidth) {
 				// it went off the right edge! do something!
+        this.x = 0;
 			}
 
-			if (this.y < this.radius){
+			if (this.y < 0){
 				// it went above the top edge!
+        this.y = CircleShape.boardHeight;
 
-			} else if (this.y > CircleShape.boardHeight-this.radius) {
+			} else if (this.y > CircleShape.boardHeight) {
 				// it went below the bottom edge!
+        this.y = 0;
 			}
 		}
 }

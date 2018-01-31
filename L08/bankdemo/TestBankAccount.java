@@ -37,10 +37,10 @@ public class TestBankAccount{
 	 System.out.println("a1="+a1);
 	 System.out.println("a2="+a2);
 
-   /**
+
    System.out.println("Tim has "+a1.getTransactions()+" transactions");
    System.out.println("Will has "+a2.getTransactions()+" transactions");
    System.out.println("Bank has "+BankAccount.getAllTransactions()+" transactions");
-	 */
+	
   }
 }
