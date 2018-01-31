@@ -19,8 +19,8 @@ public class CircleShape {
     public double radius;     // The radius of the circle.
     public double x,y;       // The location of the center of the circle.
     public Color color;   // The color of the circle.
-		private double vx=20;
-		private double vy=10;
+		protected double vx=20;
+		protected double vy=10;
 
     /**
      * Create a CircleShape with a given location and radius and with a

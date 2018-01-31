@@ -14,7 +14,7 @@ public class DrawingModel {
 	create a model of a board that can simulate up to n moving circles
 	*/
 	public DrawingModel(int n){
-		circles = new CircleShape[n];
+		circles = new CircleShape[2*n];
 	}
 
 	/**
@@ -23,7 +23,9 @@ public class DrawingModel {
 	public void init(){
 		for(int i=0; i< 10; i++){
 			CircleShape c = new CircleShape();
+      CircleShape c2 = new RadiusChangingCircle();
 			this.add(c);
+      this.add(c2);
 		}
 	}
 
