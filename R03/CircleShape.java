@@ -89,22 +89,22 @@ public class CircleShape {
 			change the values of x,y,vx,vy to keep the circle on the board
 		*/
 		public void keepOnBoard(){
-			if (this.x < 0) {
+			if (this.x < this.radius) {
 				// it went off the left edge! do something!
-        this.x = CircleShape.boardWidth;
+        this.vx = -this.vx;
 
-			}else if (this.x > CircleShape.boardWidth) {
+			}else if (this.x > CircleShape.boardWidth-this.radius) {
 				// it went off the right edge! do something!
-        this.x = 0;
+        this.vx = -this.vx;
 			}
 
-			if (this.y < 0){
+			if (this.y < this.radius){
 				// it went above the top edge!
-        this.y = CircleShape.boardHeight;
+        this.vy = -this.vy;
 
-			} else if (this.y > CircleShape.boardHeight) {
+			} else if (this.y > CircleShape.boardHeight-this.radius) {
 				// it went below the bottom edge!
-        this.y = 0;
+        this.vy = -this.vy;
 			}
 		}
 }
