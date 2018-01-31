@@ -6,7 +6,10 @@ This represents the model of an animation in which circular shapes move on a boa
 */
 public class DrawingModel {
 	private CircleShape[] circles;
+  private RadiusChangeCircle[] rcircles;
+  // .... add 10 or 20 more of these ....
 	private int numCircles=0;
+  private int numrCircles=0;
 	private double dt = 0.02;
 
 
@@ -15,6 +18,7 @@ public class DrawingModel {
 	*/
 	public DrawingModel(int n){
 		circles = new CircleShape[n];
+    rcircles = new RadiusChangeCircle[n];
 	}
 
 	/**
@@ -23,7 +27,9 @@ public class DrawingModel {
 	public void init(){
 		for(int i=0; i< 10; i++){
 			CircleShape c = new CircleShape();
+      RadiusChangeCircle c2 = new RadiusChangeCircle();
 			this.add(c);
+      this.add(c2);
 		}
 	}
 
@@ -35,6 +41,11 @@ public class DrawingModel {
 		circles[numCircles]=c;
 		numCircles++;
 	}
+
+  public void add(RadiusChangeCircle c){
+    rcircles[numrCircles]=c;
+    numCircles++;
+  }
 
 	/**
 		draw the model on the screen
@@ -48,6 +59,11 @@ public class DrawingModel {
 			CircleShape c = circles[i];
 			c.draw(g);
 		}
+
+    for(int i=0; i<numrCircles; i++){
+      RadiusChangeCircle c = rcircles[i];
+      c.draw(g);
+    }
 	}
 
 	/**
@@ -57,5 +73,9 @@ public class DrawingModel {
 		for(int i=0; i<numCircles; i++){
 			circles[i].update(dt);
 		}
+
+    for(int i=0; i<numrCircles; i++){
+      rcircles[i].update(dt);
+    }
 	}
 }
