@@ -18,7 +18,7 @@ You should write the following instance methods:
 toString() method which will produce the following String
 representation for the object:
 car.toString() -->
-carpool(Tim Hickey from Coolidge Corner, leaves 8 am returns 5 pm with 4 available seats)
+carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats)
 
 addRider() --> which decreases the number of available seats by 1
 

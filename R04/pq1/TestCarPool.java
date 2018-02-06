@@ -3,7 +3,7 @@ package pq1;
 public class TestCarPool {
 	static CarPool[] cars = new CarPool[100];
 	static int numCars = 0;
-	public static void main(String[] args){
+	public static void main(String[] args) throws Exception{
 		TestCarPool.initCars();
 		TestCarPool.printCars();
 		TestCarPool.loadCars();
@@ -20,13 +20,13 @@ public class TestCarPool {
 
 	}
 
-	public static void loadCars(){
+	public static void loadCars() throws Exception{
 		cars[0].addRider(2);
 		cars[1].addRider(4);
 		cars[2].addRider(1);
 	}
 
-	public static void loadCars(){
+	public static void changeCars() throws Exception{
 		cars[0].addRider(1);
 		cars[1].removeRider(3);
 		cars[2].removeRider(1);
