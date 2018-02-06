@@ -1,3 +1,5 @@
+package pq1;
+
 /**
 The CarPool class represent a carpooling vehicle.
 It has a constructor that allows you to create a Carpool by specifying
@@ -18,12 +20,49 @@ You should write the following instance methods:
 toString() method which will produce the following String
 representation for the object:
 car.toString() -->
-carpool(Tim Hickey from Coolidge Corner, leaves 8 am returns 5 pm with 4 available seats)
+carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats)
 
-addRider() --> which decreases the number of available seats by 1
+addRider(k) --> which decreases the number of available seats by k
 
-removeRider() --> which increases the number of available seats by 1
+removeRider(k) --> which increases the number of available seats by k
 
 getAvailableSeats() --> which returns the number of available getAvailableSeats
 
 */
+
+
+public class CarPool{
+	private String owner;
+	private String origin;
+	private String pickup;
+	private String departure;
+	private int spaces;
+
+	public CarPool(String owner, String origin, String pickup, String departure, int spaces){
+		this.owner = owner;
+		this.origin = origin;
+		this.pickup = pickup;
+		this.departure = departure;
+		this.spaces = spaces;
+	}
+
+	public void addRider(int k){
+		this.spaces -= k;
+	}
+
+	public void removeRider(int k){
+		this.spaces += k;
+	}
+
+	public int getAvailableSeats(){
+		return this.spaces;
+	}
+
+	public String toString(){
+		return
+		    "carpool("+this.owner+ " leaves "+this.origin +
+		    " at "+this.pickup+" returns "+this.departure+
+				" has "+this.spaces+" available seats)";
+	}
+
+}
