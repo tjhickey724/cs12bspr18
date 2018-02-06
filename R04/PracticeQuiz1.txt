@@ -1,5 +1,17 @@
+Practice Quiz 1
+
+This practice quiz has 2 parts.
+Part I is easier and I hope everyone can complete it in class
+Part II is more challenging, but it might be possible to complete it too.
+Download the pq1 folder from R04 in github to start
+Upload your solutions to Part I and Part II to the Peer Review App
+and later tonight make comments on at least 3 other students solutions.
+You may ask each other and your mentor for help for this practice quiz
+but you may not get any help on the actual quiz next Tuesday.
+
+
+
 Part I.
-Download the pq1 folder from R04 in github.
 Your job is to write the CarPool class according to the following specification:
 
 The CarPool class represent a carpooling vehicle.
@@ -21,9 +33,9 @@ representation for the object:
 car.toString() -->
 carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats)
 
-addRider() --> which decreases the number of available seats by 1, 
+addRider() --> which decreases the number of available seats by 1,
 
-removeRider() --> which increases the number of available seats by 1, 
+removeRider() --> which increases the number of available seats by 1,
 
 getAvailableSeats() --> which returns the number of available getAvailableSeats
 
@@ -32,9 +44,15 @@ You can assume the user will not try to add too many riders or remove a rider fr
 
 ****************************************************************
 
-Part II. If you can complete Part I, then copy your solution to a new folder pq1a
+If you can complete Part I, then work on Part II.
+In any case, you should complete this at home and comment on at least 3 other students'
+solutions to Part I and Part II.
+
+Part II.
+
+Copy your solution to a new folder pq1a
 and modify it so that it adds and removes riders by name and returns the list of current riders.
-Remove the old addRider and removeRider methods and replace them with 
+Remove the old addRider and removeRider methods and replace them with
 addRider(name)
 removeRider(name)
 getCurrentRiders() --> returns array of names of current riders
@@ -43,4 +61,3 @@ getAvailableSeats() --> returns number of available seats
 Also add code to throw an Exception if they try to add a rider to a full car or remove a rider from an empty car.
 
 Also modify the TestCarPool code so that it tests these features and throws an exception if they incorrect add or remove riders.
-
