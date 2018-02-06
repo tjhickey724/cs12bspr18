@@ -8,7 +8,6 @@ public class TestCarPool {
 		System.out.println("\n\nInitial Cars");
 		TestCarPool.printCars();
 
-		System.out.println("\n\nLoad the Cars");
 		TestCarPool.loadCars();
 		TestCarPool.printCars();
 
@@ -26,6 +25,7 @@ public class TestCarPool {
 	}
 
 	public static void loadCars() throws Exception{
+		System.out.println("\n\nLoad the Cars: William, Qun in car 1; Don and Jordan in car 2, Anne in car 3");
 		cars[0].addRider("William Tarimo");
 		cars[0].addRider("Qun Ju");
 		cars[1].addRider("Donald Smith");
@@ -34,6 +34,7 @@ public class TestCarPool {
 	}
 
 	public static void changeCars() throws Exception{
+		System.out.println("\n\nChange the Cars: Maria in car 1, Don out of car 2, Anne out of car 3");
 		cars[0].addRider("Maria Miara");
 		cars[1].removeRider("Donald Smith");
 		cars[2].removeRider("Anne Gudaitis");
