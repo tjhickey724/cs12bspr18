@@ -78,7 +78,34 @@ addRider(name)
 removeRider(name)
 getCurrentRiders() --> returns array of names of current riders
 getAvailableSeats() --> returns number of available seats
+Also modify toString so that it also shows the names of the riders...
 
 Also add code to throw an Exception if they try to add a rider to a full car or remove a rider from an empty car.
 
 Also modify the TestCarPool code so that it tests these features and throws an exception if they incorrect add or remove riders.
+
+****************************************************************
+Here is an example of what the correct output should be for the Part II version.
+
+%java pq1a.TestCarPool
+
+
+Initial Cars
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats riders are []
+car #1: carpool(Pito Salas leaves Lexington Center at 10 am returns 6 pm has 4 available seats riders are []
+car #2: carpool(Bruno Mars leaves Harvard Square at 11 am returns 9 pm has 2 available seats riders are []
+
+
+Load the Cars: William, Qun in car 1; Don and Jordan in car 2, Anne in car 3
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 2 available seats riders are [William Tarimo, Qun Ju]
+car #1: carpool(Pito Salas leaves Lexington Center at 10 am returns 6 pm has 2 available seats riders are [Donald Smith, Jordan Pollack]
+car #2: carpool(Bruno Mars leaves Harvard Square at 11 am returns 9 pm has 1 available seats riders are [Anne Gudaitis]
+
+
+Change the Riders
+
+
+Change the Cars: Maria in car 1, Don out of car 2, Anne out of car 3
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 1 available seats riders are [William Tarimo, Qun Ju, Maria Miara]
+car #1: carpool(Pito Salas leaves Lexington Center at 10 am returns 6 pm has 3 available seats riders are [Jordan Pollack]
+car #2: carpool(Bruno Mars leaves Harvard Square at 11 am returns 9 pm has 2 available seats riders are []
