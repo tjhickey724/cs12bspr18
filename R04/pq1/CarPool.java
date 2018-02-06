@@ -1,3 +1,5 @@
+package pq1;
+
 /**
 The CarPool class represent a carpooling vehicle.
 It has a constructor that allows you to create a Carpool by specifying
@@ -20,9 +22,9 @@ representation for the object:
 car.toString() -->
 carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats)
 
-addRider() --> which decreases the number of available seats by 1
+addRider(k) --> which decreases the number of available seats by k
 
-removeRider() --> which increases the number of available seats by 1
+removeRider(k) --> which increases the number of available seats by k
 
 getAvailableSeats() --> which returns the number of available getAvailableSeats
 
