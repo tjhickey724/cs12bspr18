@@ -41,7 +41,28 @@ getAvailableSeats() --> which returns the number of available getAvailableSeats
 
 You can assume the user will not try to add too many riders or remove a rider from an empty car.
 
+****************************************************************(
+Here is the result you should get when you complete Part I
 
+% java pq1.TestCarPool
+
+
+Initial Cars
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 4 available seats)
+car #1: carpool(Pito Salas leaves Lexington Center at 10 am returns 6 pm has 4 available seats)
+car #2: carpool(Bruno Mars leaves Harvard Square at 11 am returns 9 pm has 1 available seats)
+
+
+Load the Cars 2 in car0, 4 in car1, 1 in car 2
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 2 available seats)
+
+
+Change the Riders: 1 in car0, 3 from car1, 1 from car 2
+car #0: carpool(Tim Hickey leaves Coolidge Corner at 8 am returns 5 pm has 1 available seats)
+car #1: carpool(Pito Salas leaves Lexington Center at 10 am returns 6 pm has 3 available seats)
+car #2: carpool(Bruno Mars leaves Harvard Square at 11 am returns 9 pm has 1 available seats)
+
+%
 ****************************************************************
 
 If you can complete Part I, then work on Part II.
