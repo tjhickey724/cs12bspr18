@@ -1,8 +1,13 @@
 public class TestIntList{
 
 	public static void main(String[] args){
+<<<<<<< HEAD
 		IntList list = new IntList();
 		//GeneralList<Integer> list = new GeneralList<Integer>();
+=======
+		//IntList list = new IntList();
+		GeneralList<Integer> list = new GeneralList<Integer>();
+>>>>>>> 5a91e60c45741b6849c1a6ad2e87a86d50561a3e
 		for(int i=0; i<20; i++) {
 			list.add(100+i);
 		}

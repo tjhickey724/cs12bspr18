@@ -1,4 +1,4 @@
-package pq1;
+package pq1a;
 
 /**
 The CarPool class represent a carpooling vehicle.
@@ -37,6 +37,8 @@ public class CarPool{
 	private String pickup;
 	private String departure;
 	private int spaces;
+	private String[] riders;
+	private int numRiders=0;
 
 	public CarPool(String owner, String origin, String pickup, String departure, int spaces){
 		this.owner = owner;
@@ -44,25 +46,49 @@ public class CarPool{
 		this.pickup = pickup;
 		this.departure = departure;
 		this.spaces = spaces;
+		this.riders = new String[spaces];
 	}
 
-	public void addRider(int k){
-		this.spaces -= k;
+	public void addRider(String s) throws Exception{
+		if (spaces==0) throw new Exception("can't add rider to a full car");
+		riders[numRiders]=s;
+		numRiders++;
+		spaces--;
 	}
 
-	public void removeRider(int k){
-		this.spaces += k;
+	public void removeRider(String s) throws Exception{
+		if (numRiders==0) throw new Exception("can't remove rider from empty car");
+		for(int i=0; i<numRiders; i++){
+			if (riders[i].equals(s)){
+				if(numRiders == 1){
+					numRiders=0;
+				}else {
+					riders[i] = riders[numRiders-1];
+					numRiders--;
+				}
+			}
+		}
+		spaces++;
 	}
 
 	public int getAvailableSeats(){
 		return this.spaces;
 	}
 
+	private String[] getCurrentRiders(){
+		String[] current = new String[numRiders];
+		for(int i=0; i<numRiders; i++){
+			current[i]=riders[i];
+		}
+		return current;
+	}
+
 	public String toString(){
 		return
 		    "carpool("+this.owner+ " leaves "+this.origin +
 		    " at "+this.pickup+" returns "+this.departure+
-				" has "+this.spaces+" available seats)";
+				" has "+this.spaces+" available seats" +
+				" riders are " + java.util.Arrays.toString(getCurrentRiders());
 	}
 
 }

@@ -1,4 +1,4 @@
-package pq1;
+package pq1a;
 
 public class TestCarPool {
 	static CarPool[] cars = new CarPool[100];
@@ -8,11 +8,10 @@ public class TestCarPool {
 		System.out.println("\n\nInitial Cars");
 		TestCarPool.printCars();
 
-		System.out.println("\n\nLoad the Cars 2 in car0, 4 in car1, 1 in car 2");
 		TestCarPool.loadCars();
 		TestCarPool.printCars();
 
-		System.out.println("\n\nChange the Riders: 1 in car0, 3 from car1, 1 from car 2");
+		System.out.println("\n\nChange the Riders");
 		TestCarPool.changeCars();
 		TestCarPool.printCars();
 	}
@@ -20,21 +19,25 @@ public class TestCarPool {
 	public static void initCars(){
 		TestCarPool.cars[0] = new CarPool("Tim Hickey","Coolidge Corner","8 am","5 pm",4);
 		TestCarPool.cars[1] = new CarPool("Pito Salas","Lexington Center","10 am","6 pm",4);
-		TestCarPool.cars[2] = new CarPool("Bruno Mars","Harvard Square","11 am","9 pm",1);
+		TestCarPool.cars[2] = new CarPool("Bruno Mars","Harvard Square","11 am","9 pm",2);
 		TestCarPool.numCars=3;
 
 	}
 
 	public static void loadCars() throws Exception{
-		cars[0].addRider(2);
-		cars[1].addRider(4);
-		cars[2].addRider(1);
+		System.out.println("\n\nLoad the Cars: William, Qun in car 1; Don and Jordan in car 2, Anne in car 3");
+		cars[0].addRider("William Tarimo");
+		cars[0].addRider("Qun Ju");
+		cars[1].addRider("Donald Smith");
+		cars[1].addRider("Jordan Pollack");
+		cars[2].addRider("Anne Gudaitis");
 	}
 
 	public static void changeCars() throws Exception{
-		cars[0].addRider(1);
-		cars[1].removeRider(3);
-		cars[2].removeRider(1);
+		System.out.println("\n\nChange the Cars: Maria in car 1, Don out of car 2, Anne out of car 3");
+		cars[0].addRider("Maria Miara");
+		cars[1].removeRider("Donald Smith");
+		cars[2].removeRider("Anne Gudaitis");
 	}
 
 	public static void printCars(){
