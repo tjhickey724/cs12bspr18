@@ -12,7 +12,7 @@ public class DrawingArea extends JPanel
 		// let the user drag them around.  It uses an off-screen images to
 		// make the dragging look as smooth as possible.
 
-		Shape[] shapes = new Shape[500]; // holds a list of up to 500 shapes
+		Shapeable[] shapes = new Shapeable[500]; // holds a list of up to 500 shapes
 		int shapeCount = 0;  // the actual number of shapes
 		Color currentColor = Color.RED;  // current color; when a shape is created, this is its color
 		JComboBox<String> colorChoice;
@@ -31,7 +31,7 @@ public class DrawingArea extends JPanel
 				g.setColor(Color.WHITE);
 				g.fillRect(0,0,getSize().width,getSize().height);
 				for (int i = 0; i < shapeCount; i++) {
-						Shape s = shapes[i];
+						Shapeable s = shapes[i];
 						s.draw(g);
 				}
 				g.setColor(Color.BLACK);  // draw a black border around the edge of the drawing area
@@ -69,7 +69,7 @@ public class DrawingArea extends JPanel
 				}
 		}
 
-		void addShape(Shape shape) {
+		void addShape(Shapeable shape) {
 						// Add the shape to the canvas, and set its size/position and color.
 						// The shape is added at the top-left corner, with size 80-by-50.
 						// Then redraw the canvas to show the newly added shape.
@@ -83,7 +83,7 @@ public class DrawingArea extends JPanel
 
 		// -------------------- This rest of this class implements dragging ----------------------
 
-		Shape shapeBeingDragged = null;  // This is null unless a shape is being dragged.
+		Shapeable shapeBeingDragged = null;  // This is null unless a shape is being dragged.
 																		 // A non-null value is used as a signal that dragging
 																		 // is in progress, as well as indicating which shape
 																		 // is being dragged.
@@ -99,7 +99,7 @@ public class DrawingArea extends JPanel
 				int x = evt.getX();  // x-coordinate of point where mouse was clicked
 				int y = evt.getY();  // y-coordinate of point
 				for ( int i = shapeCount - 1; i >= 0; i-- ) {  // check shapes from front to back
-						Shape s = shapes[i];
+						Shapeable s = shapes[i];
 						if (s.containsPoint(x,y)) {
 								shapeBeingDragged = s;
 								prevDragX = x;

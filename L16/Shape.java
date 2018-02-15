@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public abstract class Shape {
+public abstract class Shape implements Shapeable {
 
 				// A class representing shapes that can be displayed on a ShapeCanvas.
 				// The subclasses of this class represent particular types of shapes.
