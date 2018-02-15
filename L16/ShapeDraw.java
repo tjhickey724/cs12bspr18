@@ -20,7 +20,7 @@ public class ShapeDraw extends JPanel {
     public static void main(String[] args) {
         JFrame window = new JFrame("Really Simple ShapeDraw");
         window.setContentPane( new ShapeDraw() );
-        window.setSize(500,400);
+        window.setSize(150,150);
 
         window.setLocation(150,100);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +42,7 @@ public class ShapeDraw extends JPanel {
 
 				colorChoice = new JComboBox<String>();
 				DrawingArea canvas = new DrawingArea(colorChoice);  // create the canvas
-				
+
          // color choice menu
         colorChoice.addItem("Red");
         colorChoice.addItem("Green");

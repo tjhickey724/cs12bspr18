@@ -45,7 +45,7 @@ public abstract class Shape {
 						return false;
 		}
 
-		abstract void draw(Graphics g);
+		public abstract void draw(Graphics g);
 				// Draw the shape in the graphics context g.
 				// This must be overriden in any concrete subclass.
 
