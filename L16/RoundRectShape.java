@@ -7,7 +7,7 @@ public class RoundRectShape extends Shape {
 				// (Note that it uses the inherited version of the
 				// containsPoint(x,y) method, even though that is not perfectly
 				// accurate when (x,y) is near one of the corners.)
-		void draw(Graphics g) {
+		public void draw(Graphics g) {
 				g.setColor(color);
 				g.fillRoundRect(left,top,width,height,width/3,height/3);
 				g.setColor(Color.black);

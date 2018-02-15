@@ -13,7 +13,7 @@ public abstract class Shape {
 		int width, height;  // Size of the bounding rectangle.
 		Color color = Color.white;  // Color of this shape.
 
-		void reshape(int left, int top, int width, int height) {
+		public void reshape(int left, int top, int width, int height) {
 						// Set the position and size of this shape.
 				this.left = left;
 				this.top = top;
@@ -21,19 +21,19 @@ public abstract class Shape {
 				this.height = height;
 		}
 
-		void moveBy(int dx, int dy) {
+		public void moveBy(int dx, int dy) {
 						// Move the shape by dx pixels horizontally and dy pixels vertically
 						// (by changing the position of the top-left corner of the shape).
 				left += dx;
 				top += dy;
 		}
 
-		void setColor(Color color) {
+		public void setColor(Color color) {
 						// Set the color of this shape
 				this.color = color;
 		}
 
-		boolean containsPoint(int x, int y) {
+		public boolean containsPoint(int x, int y) {
 						// Check whether the shape contains the point (x,y).
 						// By default, this just checks whether (x,y) is inside the
 						// rectangle that bounds the shape.  This method should be

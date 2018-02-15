@@ -4,13 +4,13 @@ import javax.swing.*;
 
 public class OvalShape extends Shape {
 				// This class represents oval shapes.
-		void draw(Graphics g) {
+		public void draw(Graphics g) {
 				g.setColor(color);
 				g.fillOval(left,top,width,height);
 				g.setColor(Color.black);
 				g.drawOval(left,top,width,height);
 		}
-		boolean containsPoint(int x, int y) {
+		public boolean containsPoint(int x, int y) {
 						// Check whether (x,y) is inside this oval, using the
 						// mathematical equation of an ellipse.  This replaces the
 						// definition of containsPoint that was inherited from the
