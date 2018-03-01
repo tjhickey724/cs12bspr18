@@ -12,6 +12,12 @@ public class Complex{
     this.im = 0;
   }
 
+  public Complex(){
+    this.re=0;
+    this.im=0;
+    System.out.println("Who called me????");
+  }
+
 	/**
 	* returns the complex conjugate a-bi of the complex number a+bi
 	*/
