@@ -4,13 +4,6 @@ public class CounterDemo implements Runnable{
 
 	private String name;
 
-	public static void main(String[] args){
-		CounterDemo tim = new CounterDemo("tim");
-		CounterDemo jiarui = new CounterDemo("jiarui");
-		tim.run();
-		jiarui.run();
-	}
-
 	public CounterDemo(String name){
 		this.name=name;
 	}
@@ -20,7 +13,7 @@ public class CounterDemo implements Runnable{
 	public void run(){
 		Random r = new Random();
 		try{
-			for(int i=0; i<10; i++){
+			for(int i=0; i<4; i++){
 				Thread.sleep(r.nextInt(1000)); // this pauses the process for 1000 milliseconds
 				System.out.println("CounterDemo: "+name+" step "+i);
 			}
@@ -29,4 +22,11 @@ public class CounterDemo implements Runnable{
 		}
 
 	}
+
+  public static void main(String[] args){
+    CounterDemo tim = new CounterDemo("tim");
+    CounterDemo jiarui = new CounterDemo("jiarui");
+    tim.run();
+    jiarui.run();
+  }
 }
