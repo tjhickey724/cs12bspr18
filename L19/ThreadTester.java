@@ -8,13 +8,21 @@ public class ThreadTester {
 		tim.run();
 		jiarui.run();
 		r.run();
+
 		Thread timThread = new Thread(tim);
 		Thread jiaruiThread = new Thread(jiarui);
 		Thread rThread = new Thread(r);
+
 		System.out.println("\n\nCall the start method on the tim and jiarui and r Threads!");
 		timThread.start();
 		jiaruiThread.start();
 		rThread.start();
+
+    for(int i = 0; i<500; i++){
+      Thread x = new Thread(new CounterDemo("thread:"+i));
+      x.start();
+    }
+    
 	}
 
 
