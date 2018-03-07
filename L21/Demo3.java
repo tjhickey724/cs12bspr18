@@ -19,6 +19,7 @@ public class Demo3{
 	public static void main(String[] args){
 
     JFrame window = new JFrame("Demo3");
+    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel content = new JPanel();
 		content.setLayout(new BorderLayout());
 
@@ -29,10 +30,14 @@ public class Demo3{
 
 		JPanel leftbar = new JPanel();
 		leftbar.setLayout(new GridLayout(0,2));
-		leftbar.add(new JLabel("side 1"));leftbar.add(new JTextField("3"));
-		leftbar.add(new JLabel("side 2"));leftbar.add(new JTextField("4"));
-		leftbar.add(new JLabel("side 3"));leftbar.add(new JTextField("5"));
-		leftbar.add(new JButton("Calculate")); leftbar.add(new JButton("Clear"));
+		leftbar.add(new JLabel("side 1"));
+    leftbar.add(new JTextField("3"));
+		leftbar.add(new JLabel("side 2"));
+    leftbar.add(new JTextField("4"));
+		leftbar.add(new JLabel("side 3"));
+    leftbar.add(new JTextField("5"));
+		leftbar.add(new JButton("Calculate"));
+    leftbar.add(new JButton("Clear"));
 		leftbar.setBackground(Color.GREEN);
 		content.add(leftbar,BorderLayout.CENTER);
 

@@ -46,15 +46,21 @@ public class Tip{
 			}
 		});
 
-		calculateB.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent event){
-				String mealCostText = mealCostTF.getText();
-				double mealCost = Double.parseDouble(mealCostText);
-				double tip = mealCost*0.15;
-				String response = "Your tip is "+tip;
-				answerL.setText(response);
-			}
-		});
+    calculateB.addActionListener(new ActionListener(){
+    			public void actionPerformed(ActionEvent event){
+    				String mealCostText = mealCostTF.getText();
+    				String taxRateText = taxRateTF.getText();
+    				String tipRateText = tipRateTF.getText();
+    				double mealCost = Double.parseDouble(mealCostText);
+    				double taxRate = Double.parseDouble(taxRateText);
+    				double tipRate = Double.parseDouble(tipRateText);
+    				double tip = mealCost*(tipRate/100);
+    				double tax = mealCost*(taxRate/100);
+    				double total = mealCost+tip+tax;
+    				String response = "Your tip is "+tip+" and your tax is "+tax+" and your meal cost is "+mealCost+" and your total is "+total;
+    				answerL.setText(response);
+    			}
+    		});
 
 
 		window.setContentPane(content);
