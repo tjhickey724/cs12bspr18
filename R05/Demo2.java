@@ -23,7 +23,8 @@ public class Demo2{
 		content.setLayout(new BorderLayout());
 
 		JLabel label1 = new JLabel("Demo 2 is cool");
-		label1.setBackground(Color.YELLOW);
+    label1.setOpaque(true);
+		label1.setBackground(Color.GREEN);
 		content.add(label1,BorderLayout.PAGE_START);
 
 
