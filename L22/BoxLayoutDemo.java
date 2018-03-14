@@ -41,6 +41,7 @@ import java.awt.Container;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class BoxLayoutDemo {
     public static void addComponentsToPane(Container pane) {
@@ -51,6 +52,16 @@ public class BoxLayoutDemo {
         addAButton("Button 3", pane);
         addAButton("Long-Named Button 4", pane);
         addAButton("5", pane);
+
+	JPanel row = new JPanel();
+	row.setLayout(new BoxLayout(row,BoxLayout.X_AXIS));
+	addAButton("Button R1",row);
+	addAButton("Button R2",row);
+	addAButton("Button R3",row);
+	addAButton("Button R4 with a long name!",row);
+
+	pane.add(row);
+
     }
 
     private static void addAButton(String text, Container container) {

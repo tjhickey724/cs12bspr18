@@ -1,0 +1,10 @@
+Practice Quiz 2
+
+The goal of the quiz is to test your understanding of
+1) The standard GUI components
+    button, label, panel, checkbox, textfield, textarea, combobox,
+2) The standard GUI layouts
+	FlowLayout, BorderLayout, GridLayout, BoxLayout
+3) The use of anonymous ActionListener classes to add functionality to an app
+  reading from a textfield, converting strings to integers or doubles,
+	writing to a label
