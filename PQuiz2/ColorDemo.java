@@ -7,7 +7,7 @@ public class ColorDemo {
 		JFrame frame = new JFrame("ColorDemo");
 		JPanel content = new JPanel();
 		content.setLayout(new BorderLayout());
-		JPanel lyftFees = new JPanel();
+		//JPanel lyftFees = new JPanel();
 		content.add(new JLabel("<html><h1>ColorDemo</h1></html>"),BorderLayout.PAGE_START);
 
 		JPanel left = new JPanel();

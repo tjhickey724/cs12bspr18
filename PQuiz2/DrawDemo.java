@@ -7,7 +7,7 @@ public class DrawDemo {
 		JFrame frame = new JFrame("DrawDemo");
 		JPanel content = new JPanel();
 		content.setLayout(new BorderLayout());
-		JPanel lyftFees = new JPanel();
+		//JPanel lyftFees = new JPanel();
 		content.add(new JLabel("<html><h1>DrawDemo</h1></html>"),BorderLayout.PAGE_START);
 
 		JPanel left = new JPanel();
@@ -40,7 +40,7 @@ public class DrawDemo {
 		frame.setSize(500,500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.show(true);
-		
+
 
 	}
 }
