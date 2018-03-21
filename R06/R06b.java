@@ -8,7 +8,6 @@ public class R06b {
 		JPanel panel = new JPanel();
 		JTextField xTF = new JTextField("25");
 		JTextField gTF = new JTextField("1");
-		JLabel
 		JButton goB = new JButton("go");
 
 		panel.setLayout(new GridLayout(0,2));

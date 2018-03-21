@@ -6,7 +6,9 @@ public class R06a {
 	public static void main(String[] args){
 		JFrame frame = new JFrame("Robotic Boat");
 		JPanel content = new JPanel();
+
 		content.setLayout(new BorderLayout());
+
 		JPanel header = new JPanel();
 		header.add(new JLabel("<html><h1>Navigate the robotic boat!</h1></html>"));
 		content.add(header,BorderLayout.PAGE_START);
