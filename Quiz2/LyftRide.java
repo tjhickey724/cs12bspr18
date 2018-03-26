@@ -30,7 +30,7 @@ public class LyftRide {
 		JPanel inputPanel = new JPanel();
 		JTextField distTF = new JTextField("2");
 		JTextField timeTF = new JTextField("10");
-		JLabel totalL = new JLabel("$25");
+		JLabel totalL = new JLabel("$13");
 
 		inputPanel.setLayout(new GridLayout(0,2));
 		inputPanel.add(new JLabel("ride distance in miles:"));inputPanel.add(distTF);
@@ -43,9 +43,9 @@ public class LyftRide {
 		content.add(instructions,BorderLayout.PAGE_END);
 
 		frame.setContentPane(content);
-		frame.setSize(500,500);
+		frame.setSize(800,300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.show(true);
+		frame.setVisible(true);
 
 		go.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
