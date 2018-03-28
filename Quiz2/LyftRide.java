@@ -3,7 +3,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class LyftRide {
+
+
 	public static void main(String[] args){
+
 
 		JFrame frame = new JFrame("LyftRide");
 		JPanel content = new JPanel();
@@ -52,6 +55,7 @@ public class LyftRide {
 				double dist = Double.parseDouble(distTF.getText());
 				double time = Double.parseDouble(timeTF.getText());
 				double total = 5 + 3*dist + 0.2*time;
+
 				totalL.setText("$"+total);
 
 			}

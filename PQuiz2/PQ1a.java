@@ -11,7 +11,7 @@ public class PQ1a {
 		headerbar.setLayout(new BoxLayout(headerbar,BoxLayout.X_AXIS));
 
 		JLabel header = new JLabel("PQ1a -- Demonstrating Layout Mastery     ");
-		JComboBox choices = new JComboBox(new String[]{"animal","plant","bacteria","virus"});
+		JComboBox<String> choices = new JComboBox<String>(new String[]{"animal","plant","bacteria","virus"});
     JLabel choiceL = new JLabel("Kingdom");
 		headerbar.add(header);
 		headerbar.add(choiceL);
@@ -34,7 +34,7 @@ public class PQ1a {
 		frame.setContentPane(content);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(500,200);
-		frame.show(true);
+		frame.setVisible(true);
 
 	}
 }
