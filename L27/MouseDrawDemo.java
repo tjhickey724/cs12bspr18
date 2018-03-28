@@ -17,7 +17,7 @@ public class MouseDrawDemo extends JPanel implements MouseListener, MouseMotionL
 
 		/*
 			We will keep track of the current drawing using an arraylist of points ..
-			
+
 		*/
     ArrayList<Point> points = new ArrayList<Point>();
 		int lastx=0;
@@ -108,6 +108,8 @@ public class MouseDrawDemo extends JPanel implements MouseListener, MouseMotionL
 			int y = evt.getY();  // y-coordinate where user clicked.
 			points.add(new Point(x,y));
 			//System.out.printf("%d %d %d\n",x,y,points.size());
+      if (points.size()>= 20)
+        points.remove(0);
 			repaint();
 		}
 
