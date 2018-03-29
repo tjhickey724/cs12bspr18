@@ -7,7 +7,9 @@ public class PA05demo {
   public static void main(String[] args){
     JFrame window = new JFrame("PA05demo");
     MouseDrawDemo drawWidget1 = new MouseDrawDemo();
+    drawWidget1.drawingColor = Color.RED;
     MouseDrawDemo drawWidget2 = new MouseDrawDemo();
+    drawWidget2.drawingColor = Color.BLUE;
     JButton clear = new JButton("Clear");
     JPanel content = new JPanel();
     content.setLayout(new GridLayout(1,3));

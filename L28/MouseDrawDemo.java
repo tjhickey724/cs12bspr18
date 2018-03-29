@@ -22,6 +22,7 @@ public class MouseDrawDemo extends JPanel implements MouseListener, MouseMotionL
     public ArrayList<Point> points = new ArrayList<Point>();
 		public int lastx=0;
 		public int lasty=0;
+    public Color drawingColor = Color.black;
 
     public static void main(String[] args) {
         JFrame window = new JFrame("MouseDrawDemo");
@@ -53,7 +54,7 @@ public class MouseDrawDemo extends JPanel implements MouseListener, MouseMotionL
 			 g.setColor(Color.white);
 			 g.fillRect(0,0,getWidth(),getHeight());
 
-			 g.setColor(Color.black);
+			 g.setColor(this.drawingColor);
 			 if (points.size()==0)
 			   return;
 
