@@ -11,6 +11,7 @@ public interface ListA<E>{
   public ListIterator<E> iterator();
   public E remove(int index);
   public E set(int index, E element);
+  public int size();
   public Object[] toArray();
 
 }

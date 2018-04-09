@@ -5,12 +5,37 @@ import java.util.ListIterator;
  */
 
 public class LinkedListA<E> {
-  Node start;
+  Node<E> start;
+  int size=0;
 
   public LinkedListA(){
   }
 
   public void add(int index, E element){
+    Node<E>n;
+    if (start==null){
+      if (index>0) return;
+      n = new Node<E>();
+      n.value = element;
+      start = n;
+      n.prev =null;
+      n.next=null;
+    } else {
+      n = start;
+      for(int i=0; i<index-1; i++){
+        n = n.next;
+        System.out.printf("%d %s\n",i,n);
+      }
+      Node<E> m = new Node<E>();
+      m.value = element;
+      m.prev=n;
+      m.next= n.next;
+      if (n.next != null)
+         n.next.prev = m;
+      n.next = m;
+    }
+    size++;
+    System.out.println(n);
     return;
   }
 
@@ -23,7 +48,11 @@ public class LinkedListA<E> {
   }
 
   public E get(int index){
-    return null;
+    Node<E> n = start;
+    for(int i=0; i<index; i++){
+      n = n.next;
+    }
+    return n.value;
   }
 
   public int indexOf(Object o){
@@ -46,15 +75,14 @@ public class LinkedListA<E> {
     return null;
   }
 
+  public int size(){
+    return this.size;
+  }
   public Object[] toArray(){
     return null;
   }
 
 
-  class Node<T> {
-    T value;
-    Node next, prev;
-  }
 
 
 }

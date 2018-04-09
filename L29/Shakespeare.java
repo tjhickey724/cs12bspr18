@@ -60,8 +60,10 @@ public class Shakespeare {
         System.out.println();
         counter = 0;
       }
-      if (word.endsWith("."))
+      if (word.endsWith(".")){
         System.out.println();
+        counter=0;
+      }
       words=s.nextWords.get(word);
       word = s.pickRandom(words);
     }

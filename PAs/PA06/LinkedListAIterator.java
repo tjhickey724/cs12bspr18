@@ -3,11 +3,11 @@ import java.util.ListIterator;
 
 
 public class LinkedListAIterator<E> implements ListIterator<E>{
-  private LinkedListA list;
-  private currentIndex=0;
-  private currentPosition = list.start;
+  private LinkedListA<E> list;
+  private int currentIndex=0;
+  private Node<E> currentPosition = list.start;
 
-  public LinkedListAIterator(LinkedListA list){
+  public LinkedListAIterator(LinkedListA<E> list){
     this.list = list;
   }
 
