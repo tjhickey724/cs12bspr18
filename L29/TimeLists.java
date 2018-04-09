@@ -34,12 +34,12 @@ public class TimeLists{
     }
     long start = System.nanoTime();
     for(int i=0; i<size; i++){
-      list.add(0,i); //list.size()/2,i);
+      list.add(i); //list.size()/2,i);
     }
     long finish = System.nanoTime();
     double seconds = (finish-start)/1000000000.0;
     System.out.printf(
-    "adding %d numbers to front of %s takes %f seconds\n",size,listType,seconds);
+    "adding %d numbers to %11s takes %.5f microseconds per insert\n",size,listType,1000000*seconds/size);
     return seconds;
   }
 
@@ -52,7 +52,7 @@ public class TimeLists{
     long finish = System.nanoTime();
     double seconds = (finish-start)/1000000000.0;
     System.out.printf(
-    "accessing %d numbers in %s takes %f seconds\n",steps,listType,seconds);
+    "accessing %d numbers in %11s takes %.5f microseconds per access\n",steps,listType,1000000*seconds/steps);
     return seconds;
   }
 }
