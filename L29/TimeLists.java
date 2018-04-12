@@ -34,7 +34,7 @@ public class TimeLists{
     }
     long start = System.nanoTime();
     for(int i=0; i<size; i++){
-      list.add(i); //list.size()/2,i);
+      list.add(0,i); //list.size()/2,i);
     }
     long finish = System.nanoTime();
     double seconds = (finish-start)/1000000000.0;
