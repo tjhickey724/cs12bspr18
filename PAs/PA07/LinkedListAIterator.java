@@ -7,8 +7,11 @@ public class LinkedListAIterator<E> implements ListIterator<E>{
   private int currentIndex=0;
   private Node<E> currentPosition = list.start;
 
-  public LinkedListAIterator(LinkedListA<E> list){
+  public LinkedListAIterator(LinkedListA<E> list,int pos){
     this.list = list;
+    for(int i=0; i<pos; i++){
+      this.list.next();
+    }
   }
 
   public void add(E e){

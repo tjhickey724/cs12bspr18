@@ -11,5 +11,14 @@ public class TestLinkedListA {
     for (int i=0;i<list.size(); i++){
       System.out.println(i+" "+list.get(i));
     }
+    ListIterator<String> it = list.listIterator();
+    while(it.hasNext()){
+      it.add("x");
+      it.next();
+    }
+
+    for (int i=0;i<list.size(); i++){
+      System.out.println(i+" "+list.get(i));
+    }
   }
 }
