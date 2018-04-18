@@ -48,7 +48,7 @@ public class Shakespeare {
 
   public static void main(String[] args){
     int counter=0;
-    Shakespeare s = new Shakespeare("RandJ.txt");
+    Shakespeare s = new Shakespeare("TomSawyer.txt");
     String word = s.pickRandom(s.allWords); //"love";
     int n = Integer.parseInt(args[0]);
     ArrayList<String> words;
