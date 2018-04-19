@@ -60,7 +60,8 @@ public class MouseDrawDemo extends JPanel implements MouseListener, MouseMotionL
 
 			 Point lastPoint = points.get(0);
 			 for(Point p: points){
-				 g.drawLine(lastPoint.x,lastPoint.y, p.x, p.y);
+				 //g.drawLine(lastPoint.x,lastPoint.y, p.x, p.y);
+         g.drawOval(p.x,p.y,20,20);
 				 lastPoint = p;
 			 }
 		 }

@@ -11,11 +11,15 @@ import java.util.Random;
  * It then generates sentences by starting with a specified word and then
  * repeatedly picking a random word that follows that one, and iterating some
  * fixed number of times...
+
+
+ THIS NEEDS A LOT OF WORK ....
+ 
  */
 
 public class Shakespeare {
-  HashMap<String,ArrayList<String>>
-     nextWords = new HashMap<String,ArrayList<String>>();
+  HashMap<String,Integer>
+     nextWords = new HashMap<String,Integer>();
   String[] allWords;
   Random random = new Random();
 
