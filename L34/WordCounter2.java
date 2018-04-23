@@ -77,10 +77,12 @@ public class WordCounter2{
       int count = counter.get(word);
       counts.add(new Counter(word,count));
     }
+
+    // here is how we sort an ArrayList using a given Comparator ...
     Collections.sort(counts,new CountOrder());
     for(Counter c: counts){
       if (c.count >= num) {
-        System.out.println(c.word+"="+c.count);        
+        System.out.println(c.word+"="+c.count);
       }
     }
   }
@@ -92,6 +94,7 @@ public class WordCounter2{
       this.word=word; this.count=count;
     }
   }
+  
 
   static class WordOrder implements Comparator<Counter>{
     public int compare(Counter a, Counter b){
