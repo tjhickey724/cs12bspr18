@@ -2,9 +2,11 @@ import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.Set;
 import java.util.Map;
+
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 public class MapDemo{
   public static void main(String[] args){
@@ -61,7 +63,7 @@ public class MapDemo{
   }
 
   public static Map<String,String> readMapFromFile(String filename){
-      Map<String,String> d = new HashMap<String,String>();
+      Map<String,String> d = new TreeMap<String,String>();
       try{
         File file = new File(filename);
         Scanner scanner = new Scanner(file);
@@ -73,7 +75,7 @@ public class MapDemo{
           d.put(key,value);
         }
         scanner.close();
-      } catch (Exception e){
+      } catch (FileNotFoundException e){
         System.out.println("Problem reading map from file "+e);
       }
       return d;
