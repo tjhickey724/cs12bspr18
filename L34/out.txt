@@ -1,0 +1,25 @@
+The grade for Tim is B+
+The grade for Z is null
+Z doesn't have a grade!
+
+
+ gradebook:
+
+The grade for Tabitha is B+
+The hashcode for Tabitha is 111673433
+The grade for R is A+
+The hashcode for R is 82
+The grade for Xiaodong is A+
+The hashcode for Xiaodong is 329720579
+The grade for Jiarui is A
+The hashcode for Jiarui is -2076437404
+The grade for Tim is B+
+The hashcode for Tim is 84088
+The grade for Marsden is C+
+The hashcode for Marsden is -1790826248
+The grade for Jerry is A
+The hashcode for Jerry is 71462654
+The grade for Maria is A
+The hashcode for Maria is 74113750
+The grade for Donald is B
+The hashcode for Donald is 2052666774
